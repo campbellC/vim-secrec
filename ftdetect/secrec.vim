@@ -1,1 +1,1 @@
-au bufNewFile,BufRead *.sc set filetype=SecreC
+au BufNewFile,BufRead *.sc set filetype=secrec syntax=secrec
