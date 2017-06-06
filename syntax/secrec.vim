@@ -7,20 +7,21 @@ syntax keyword secrecConditional if else
 
 " Operators
 syntax keyword secrecKeyword for while 
+syntax keyword secrecKeyword template
 
 "Types
-syntax keyword secrecTypedef domain
-syntax keyword secrecType int long void
+syntax keyword secrecTypedef domain type
+syntax keyword secrecType int void uint xor_uint64 int64 uint64 int32 uint32
 
 "Includes
 syntax keyword secrecInclude import
 
 "Built in Functions
-syntax keyword secrecFunction main print
-
+syntax keyword secrecFunction main print printMatrix printVector
 
 "Comments
 syntax region secrecComment start="\/\*" end="\*\/"
+syntax match secrecComment "\v//.*$"
 
 "Constants
 syntax region secrecString start="'" skip=/\\./ end="'"
