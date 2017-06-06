@@ -23,8 +23,8 @@ syntax keyword secrecFunction main print
 syntax region secrecComment start="\/\*" end="\*\/"
 
 "Constants
-syntax region secrecString start="'" end="'"
-syntax region secrecString start='"' end='"'
+syntax region secrecString start="'" skip=/\\./ end="'"
+syntax region secrecString start='"' skip=/\\./ end='"'
 
 
 
