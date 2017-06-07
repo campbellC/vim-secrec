@@ -1,6 +1,7 @@
 if exists("b:current_syntax")
 	finish
 endif
+setlocal foldmethod=syntax
 
 " Conditionals
 syntax keyword secrecConditional if else 
@@ -8,6 +9,8 @@ syntax keyword secrecConditional if else
 " Operators
 syntax keyword secrecKeyword for while 
 syntax keyword secrecKeyword template
+syntax keyword secrecKeyword assert
+syntax keyword secrecKeyword return
 
 "Types
 syntax keyword secrecTypedef domain type
@@ -29,6 +32,9 @@ syntax region secrecString start="'" skip=/\\./ end="'"
 syntax region secrecString start='"' skip=/\\./ end='"'
 syntax keyword secrecBoolean true false
 
+"Folding
+syntax region body start="{" end="}" transparent fold
+syntax sync fromstart
 
 """""""""""""
 highlight link secrecType Type
